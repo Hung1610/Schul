@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="377.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SvArray">
+   <children>
+      <SplitPane dividerPositions="0.41286307053941906" layoutX="14.0" layoutY="98.0" prefHeight="265.0" prefWidth="484.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="NameTable" layoutX="-2.0" layoutY="32.0" prefHeight="263.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="224.0">
+               <children>
+                  <GridPane layoutX="54.0" layoutY="42.0" prefHeight="180.0" prefWidth="289.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="42.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="DTB:" />
+                        <Label text="Ket qua:" GridPane.rowIndex="1" />
+                        <Label text="Xep Loai:" GridPane.rowIndex="2" />
+                        <Label fx:id="DTBLabel" GridPane.columnIndex="2" />
+                        <Label fx:id="KQLabel" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="XLLabel" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Text layoutX="72.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tong so SV dau:" />
+                  <Text layoutX="74.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tong so SV rot:" />
+                  <Label fx:id="dauText" layoutX="199.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="rotText" layoutX="199.0" layoutY="25.0" text="Label" />
+                  <Text layoutX="47.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trung binh cong DTB:" />
+                  <Line endX="100.0" layoutX="147.0" layoutY="51.0" startX="-100.0" />
+                  <Line endX="100.0" layoutX="147.0" layoutY="222.0" startX="-100.0" />
+                  <Label fx:id="TBCLabel" layoutX="213.0" layoutY="232.0" text="Label" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <TextField fx:id="NameField" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="196.0" />
+      <Button fx:id="SearchButton" layoutX="230.0" layoutY="41.0" mnemonicParsing="false" onAction="#clickSearch" prefHeight="25.0" prefWidth="66.0" text="Search" />
+      <Text fill="#05117a" layoutX="323.0" layoutY="62.0" strokeType="INSIDE" strokeWidth="0.0" text="Danh sach SV" wrappingWidth="157.859375">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

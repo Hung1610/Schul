@@ -26,21 +26,21 @@ public class function {
 				Date d1=f.parse(ds1[3]);
 				Date d2=f.parse(ds2[3]);
 				long dif= d2.getTime()-d1.getTime();
-				long bike = dif/86400000;
+				double bike = dif/86400000.0;
 				if (ds1[0].equals("4")) {
-					long car = (dif/1800000)*5000;
+					long car = (long) (Math.ceil(dif/1800000.0))*2500;
 					String tien= Long.toString(car);
-					if(!ds2[4].equalsIgnoreCase("binh thuong")||!ds2[4].equalsIgnoreCase("not available"))
-						o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+"Chua xac dinh - Dang xu ly boi thuong");
+					if(!ds2[4].equalsIgnoreCase("Binh thuong")||!ds2[4].equalsIgnoreCase("Not Nvailable"))
+						o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+tien);
 					else o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+tien);
 				}
 				else if (ds1[0].equals("2")) {
-					long motor = bike*3000;
+					long motor = (long) (Math.ceil(bike))*3000;
 					String tien = Long.toString(motor);
 					o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+tien);
 				}
 				else {
-					long dap = bike*1000;
+					long dap = (long) (Math.ceil(bike))*1000;
 					String tien = Long.toString(dap);
 					o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+tien);
 				}

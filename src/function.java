@@ -28,7 +28,7 @@ public class function {
 				long dif= d2.getTime()-d1.getTime();
 				double bike = dif/86400000.0;
 				if (ds1[0].equals("4")) {
-					long car = (long) (Math.ceil(dif/1800000.0))*2500;
+					long car = (long) (Math.ceil(dif/1800000.0))*5000;
 					String tien= Long.toString(car);
 					if(!ds2[4].equalsIgnoreCase("Binh thuong")||!ds2[4].equalsIgnoreCase("Not Nvailable"))
 						o.println(ds1[0]+";"+ds1[1]+";"+ds1[2]+";"+ds1[3]+";"+ds2[3]+";"+tien);
